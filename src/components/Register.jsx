@@ -3,8 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Register.css"
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import IconButton from '@mui/material/IconButton';
 
 function Register() {
+  const[shows,setShows]=useState(false)
 const navigate=useNavigate();
 
     const[input,setInput]=useState({
@@ -29,6 +33,7 @@ const navigate=useNavigate();
   return (
     <div className="register">
       <form className="register_form" onSubmit={handleSubmit}>
+        <div className="reg_log">
         <div  className="reg_field">
         <p className="reg_head">Name</p>
         <TextField
@@ -44,7 +49,7 @@ const navigate=useNavigate();
         name="email"
         value={input.email}
         onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-         id="emailfield"  type="email" label="type your name" variant="outlined"/>
+         id="emailfield"  type="email" label="type your email" variant="outlined"/>
         </div>
 
         <div  className="reg_field">
@@ -53,7 +58,10 @@ const navigate=useNavigate();
         name="password"
         value={input.password}
         onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-        id="passwordfield"  type="password" label="type your name" variant="outlined"/>
+        id="passwordfield"   type={shows ? "text":"password"} label="type your password" variant="outlined"/>
+              <IconButton  color="primary" onClick={() => (setShows(!shows))} aria-label="HIDE">
+         {shows ? <VisibilityIcon /> : <VisibilityOffIcon />}
+       </IconButton>
         </div>
 
         <div  className="reg_field">
@@ -62,7 +70,7 @@ const navigate=useNavigate();
         name="number"
         value={input.number}
         onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-        id="numberfield"  type="text" label="type your name" variant="outlined"/>
+        id="numberfield"  type="text" label="type your number" variant="outlined"/>
         </div>
 
         <div  className="reg_field">
@@ -71,7 +79,7 @@ const navigate=useNavigate();
         name="age"
         value={input.age}
         onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-         id="agefield"  type="number" label="type your name" variant="outlined"/>
+         id="agefield"  type="number" label="type your age" variant="outlined"/>
         </div>
 
         <div  className="reg_field">
@@ -80,7 +88,7 @@ const navigate=useNavigate();
         name="address"
         value={input.address}
         onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-        id="addressfield"  type="text" label="type your name" variant="outlined"/>
+        id="addressfield"  type="text" label="type your address" variant="outlined"/>
         </div>
 
         <div  className="reg_field">
@@ -89,7 +97,7 @@ const navigate=useNavigate();
         name="gender"
         value={input.gender}
         onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-        id="genderfield"  type="text"  label="type your name" variant="outlined"/>
+        id="genderfield"  type="text"  label="type your gender" variant="outlined"/>
         </div>
 
         <div className="reg_field">
@@ -99,9 +107,9 @@ const navigate=useNavigate();
         name="occupation"
         value={input.occupation}
         onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-         id="occupationfield"  type="text" label="type your name" variant="outlined"/>
+         id="occupationfield"  type="text" label="type your Occupation" variant="outlined"/>
         </div>
-
+        </div>
 <div className="reg_btn">
     <Button variant="contained" type="submit">Register Here</Button>
 </div>

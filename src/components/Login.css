@@ -37,4 +37,12 @@
 }
 .field{
     margin-bottom: 15px;
+    
+}
+
+
+.log{
+    display: flex;
+    flex-direction: column;
+align-items: flex-start;
 }

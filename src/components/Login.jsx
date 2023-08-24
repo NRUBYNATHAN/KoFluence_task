@@ -5,8 +5,13 @@ import { useNavigate,Link } from "react-router-dom";
 import "./Login.css"
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-function Login() {
 
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import IconButton from '@mui/material/IconButton';
+
+function Login() {
+const[show,setShow]=useState(false)
 const navigate=useNavigate();
     const[input,setInput]=useState({
        
@@ -31,7 +36,7 @@ if(input.email===loggedUser.email && input.password === loggedUser.password){
     <div className="login">
       <form className="login_form" onSubmit={handleLogin}>
    
-
+       <div className="log">
         <div className="field">
         <p className="heading">Email</p>
         <TextField
@@ -47,17 +52,26 @@ if(input.email===loggedUser.email && input.password === loggedUser.password){
 
         <div className="field">
         <p className="heading">Password</p>
+      
         <TextField
        
           name="password"
           value={input.password}
           onChange={(e)=>setInput({...input,[e.target.name] : e.target.value,})}
-          type="password"
+          type={show ? "text":"password"}
 
-         id="outlined-basic" label="type your password" variant="outlined" />
+         id="outlined-basic" label="type your password" variant="outlined" 
+    
+         
+         />
+        <IconButton  color="primary" onClick={() => (setShow(!show))} aria-label="HIDE">
+         {show ? <VisibilityIcon /> : <VisibilityOffIcon />}
+       </IconButton>
+       
+   
        
         </div>
-
+        </div>
 
 <div className="btn">
     <Button  variant="contained" type="submit">Login Here</Button>

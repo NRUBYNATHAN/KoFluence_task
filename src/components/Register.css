@@ -33,3 +33,8 @@
 .reg_field{
     margin-bottom: 15px;
 }
+.reg_log{
+    display: flex;
+    flex-direction: column;
+align-items: flex-start;
+}
