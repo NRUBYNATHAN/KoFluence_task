@@ -1,20 +1,33 @@
 .home{
-    background-color: aquamarine;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    
+    height:700px;
+      display: flex;
+   
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
 }
 .home_compo{
-    height:800px;
+ 
+
+
+    border-radius: 20px;
+    width: 300px;
+   
+    background-color: aliceblue;
+    padding: 20px;
+   
+   
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
 }
+
 .home_head{
-    font-size: 25px;
+    font-size: 22px;
 }
 .home_det{
     font-size: 20px;
