@@ -1,0 +1,40 @@
+.login{
+    /* background-color: rgb(201, 248, 174);  */
+  height: 700px;
+    display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.login_form{
+    border-radius: 20px;
+    width: 300px;
+    background-color: aliceblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    margin: 0;
+    margin-bottom: 5px;
+    color: blueviolet;
+}
+.btn{
+    margin-top: 10px;
+}
+.text{
+    font-size: 15px;
+}
+.re{
+    text-decoration:none;
+    color: brown;
+}
+.re:hover{
+    color: blueviolet;
+}
+.field{
+    margin-bottom: 15px;
+}

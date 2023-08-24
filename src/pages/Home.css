@@ -1,0 +1,25 @@
+.home{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home_compo{
+    height:800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_head{
+    font-size: 25px;
+}
+.home_det{
+    font-size: 20px;
+    color: rgb(131, 8, 240);
+}
+.mega{
+    font-size:20px;
+}

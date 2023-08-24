@@ -1,0 +1,35 @@
+.register{
+ 
+    
+    height:auto;
+      display: flex;
+   
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+}
+.register_form{
+    /* margin-top: 200px; */
+    border-radius: 20px;
+    width: 300px;
+   
+    background-color: aliceblue;
+    padding: 20px;
+   
+   
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.reg_head{
+    margin: 0;
+    margin-bottom: 5px;
+    color: blueviolet;
+}
+.reg_btn{
+    margin-top: 20px;
+}
+.reg_field{
+    margin-bottom: 15px;
+}
